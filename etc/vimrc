@@ -32,6 +32,13 @@ set hlsearch
 colorscheme desert
 set nowrap
 filetype indent on
+autocmd Filetype sh setlocal expandtab shiftwidth=2
 autocmd Filetype python,javascript setlocal expandtab shiftwidth=2
 autocmd Filetype html,htmldjango setlocal expandtab shiftwidth=2
 autocmd Filetype css setlocal expandtab shiftwidth=2
+autocmd Filetype java setlocal expandtab shiftwidth=4
+
+map <C-n> :NERDTreeToggle<CR>
+
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
