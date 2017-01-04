@@ -18,3 +18,7 @@
 	lg = log --graph --pretty=format:\"%C(auto)%d%Creset %s\"
 [include]
 	path = .gitconfig_local
+[push]
+	default = simple
+[credential]
+	helper = cache
