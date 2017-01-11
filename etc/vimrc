@@ -6,14 +6,13 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'The-NERD-tree'
-
+Plugin 'editorconfig/editorconfig-vim'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
@@ -31,12 +30,6 @@ syntax on
 set hlsearch
 colorscheme desert
 set nowrap
-filetype indent on
-autocmd Filetype sh setlocal expandtab shiftwidth=2
-autocmd Filetype python,javascript setlocal expandtab shiftwidth=2
-autocmd Filetype html,htmldjango setlocal expandtab shiftwidth=2
-autocmd Filetype css setlocal expandtab shiftwidth=2
-autocmd Filetype java setlocal expandtab shiftwidth=4
 
 map <C-n> :NERDTreeToggle<CR>
 
